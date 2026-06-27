@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Edit Sale</title>
+</head>
+<body>
+
+<h1>Edit Sale</h1>
+
+<form method="POST">
+
+Invoice<br>
+<input type="text" name="invoice" value="{{ sale.invoice }}"><br><br>
+
+Product<br>
+<input type="text" name="product_name" value="{{ sale.product_name }}"><br><br>
+
+Customer<br>
+<input type="text" name="customer_name" value="{{ sale.customer_name }}"><br><br>
+
+Quantity<br>
+<input type="number" name="quantity" value="{{ sale.quantity }}"><br><br>
+
+Unit Price<br>
+<input type="number" name="unit_price" value="{{ sale.unit_price }}"><br><br>
+
+Profit<br>
+<input type="number" name="profit" value="{{ sale.profit }}"><br><br>
+
+Sale Date<br>
+<input type="date" name="sale_date" value="{{ sale.sale_date }}"><br><br>
+
+<button type="submit">Update Sale</button>
+
+</form>
+
+<br>
+
+<a href="/sales">Back</a>
+
+</body>
+</html>

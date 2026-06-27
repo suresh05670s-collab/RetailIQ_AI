@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Customer Statistics</title>
+</head>
+<body>
+
+<h1>Customer Statistics</h1>
+
+<h2>Total Customers</h2>
+
+<h3>{{ total_customers }}</h3>
+
+<h2>Customers by Region</h2>
+
+<table border="1">
+
+<tr>
+<th>Region</th>
+<th>Total</th>
+</tr>
+
+{% for row in region_data %}
+
+<tr>
+<td>{{ row[0] }}</td>
+<td>{{ row[1] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<a href="/dashboard">
+Back to Dashboard
+</a>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customers</title>
+</head>
+<body>
+
+<h1>Customer List</h1>
+
+<a href="/add_customer">+ Add Customer</a>
+
+<table border="1" cellpadding="8">
+<tr>
+
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Region</th>
+    <th>Actions</th>
+
+</tr>
+
+{% for customer in customers %}
+
+<tr>
+    <td>{{ customer.id }}</td>
+    <td>{{ customer.customer_name }}</td>
+    <td>{{ customer.email }}</td>
+    <td>{{ customer.phone }}</td>
+    <td>{{ customer.region }}</td>
+
+    <td>
+        <a href="/edit_customer/{{ customer.id }}">Edit</a> |
+        <a href="/delete_customer/{{ customer.id }}">Delete</a>
+    </td>
+</tr>
+
+{% endfor %}
+<form method="GET">
+
+<input type="text"
+name="search"
+placeholder="Search Customer">
+
+<button type="submit">
+Search
+</button>
+
+</form>
+
+<br>
+
+</table>
+
+<br>
+
+<a href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>

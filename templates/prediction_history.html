@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prediction History</title>
+    
+</head>
+
+<body>
+
+<h1>RetailIQ AI Prediction History</h1>
+
+<a href="/dashboard">Back to Dashboard</a>
+
+<hr>
+
+<table border="1" cellpadding="10">
+
+<tr>
+    <th>ID</th>
+    <th>Quantity</th>
+    <th>Unit Price</th>
+    <th>Predicted Profit</th>
+    <th>Date</th>
+    <th>Action</th>
+</tr>
+
+{% for row in history %}
+
+<tr>
+
+<td>{{ row.id }}</td>
+
+<td>{{ row.quantity }}</td>
+
+<td>₹{{ row.unit_price }}</td>
+
+<td>₹{{ row.predicted_profit }}</td>
+
+<td>{{ row.prediction_date }}</td>
+<td>
+
+<a href="/edit_prediction/{{ row.id }}">
+
+Edit
+
+</a>
+
+|
+
+<a href="/delete_prediction/{{ row.id }}">
+
+Delete
+
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+<form method="GET">
+
+<input
+type="text"
+name="search"
+placeholder="Search Prediction">
+
+<button type="submit">
+Search
+</button>
+
+</form>
+
+<br>
+
+</table>
+
+</body>
+
+</html>

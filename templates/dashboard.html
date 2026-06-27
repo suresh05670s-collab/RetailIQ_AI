@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetailIQ AI Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='dashboard.css') }}">
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-4">
+
+    <h1 class="text-center mb-4">
+        📊 RetailIQ AI Dashboard
+    </h1>
+
+    <div class="alert alert-primary">
+        <h4>Welcome {{ user }}</h4>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-3">
+            <div class="card bg-primary text-white">
+                <div class="card-body">
+                    <h5>Total Sales</h5>
+                    <h2>{{ dashboard.total_sales }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                    <h5>Total Products</h5>
+                    <h2>{{ dashboard.total_products }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card bg-warning">
+                <div class="card-body">
+                    <h5>Total Customers</h5>
+                    <h2>{{ dashboard.total_customers }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <div class="card bg-info text-white">
+                <div class="card-body">
+                    <h5>Total Revenue</h5>
+                    <h2>₹{{ dashboard.total_revenue }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <div class="card bg-danger text-white">
+                <div class="card-body">
+                    <h5>Total Profit</h5>
+                    <h2>₹{{ dashboard.total_profit }}</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 mb-3">
+            <div class="card bg-dark text-white">
+                <div class="card-body">
+                    <h5>Average Sale</h5>
+                    <h2>₹{{ dashboard.average_sale }}</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <h3 class="mb-3">Modules</h3>
+
+    <div class="d-grid gap-2">
+
+        <a href="/products" class="btn btn-outline-primary">📦 Products</a>
+
+        <a href="/customers" class="btn btn-outline-success">👥 Customers</a>
+
+        <a href="/sales" class="btn btn-outline-warning">🛒 Sales</a>
+
+        <a href="/analytics" class="btn btn-outline-info">📈 Analytics</a>
+
+        <a href="/prediction" class="btn btn-outline-secondary">🤖 Prediction</a>
+
+        <a href="/customer_stats" class="btn btn-outline-dark">📊 Customer Statistics</a>
+
+        <a href="/profit_chart" class="btn btn-outline-danger">💰 Profit Trend</a>
+
+        <a href="/top_products" class="btn btn-outline-primary">🏆 Top Products</a>
+
+        <a href="/category_chart" class="btn btn-outline-success">📂 Category Chart</a>
+
+        <a href="/regional_chart" class="btn btn-outline-warning">🌍 Regional Sales</a>
+
+        <a href="/analytics_dashboard" class="btn btn-outline-info">📉 Analytics Dashboard</a>
+
+        <a href="/prediction_history" class="btn btn-outline-secondary">📜 Prediction History</a>
+
+        <a href="/ai_insights" class="btn btn-success">
+            🤖 AI Business Insights
+        </a>
+
+        <a href="/forecast" class="btn btn-primary">
+            📈 AI Sales Forecast
+        </a>
+
+        <a href="/logout" class="btn btn-danger">
+            Logout
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

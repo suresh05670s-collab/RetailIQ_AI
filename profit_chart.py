@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 
-def monthly_sales_chart():
+def profit_trend_chart():
 
     conn = sqlite3.connect("database/retailiq.db")
 
@@ -18,13 +18,14 @@ def monthly_sales_chart():
 
     df["Month"] = df["sale_date"].dt.strftime("%b")
 
-    monthly = df.groupby("Month")["unit_price"].sum().reset_index()
+    monthly_profit = df.groupby("Month")["profit"].sum().reset_index()
 
-    fig = px.bar(
-        monthly,
+    fig = px.line(
+        monthly_profit,
         x="Month",
-        y="unit_price",
-        title="Monthly Sales"
+        y="profit",
+        title="Monthly Profit Trend",
+        markers=True
     )
 
     return fig.to_html(full_html=False)
