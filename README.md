@@ -109,7 +109,8 @@ Example:
 - Dashboard
 - Analytics Dashboard
 - AI Insights
-- Sales Forecast
+- prediction
+- register
 
 ---
 
