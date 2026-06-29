@@ -98,21 +98,47 @@ RetailIQ_AI/
 
 ---
 
-# Screenshots
+## Screenshots
 
-Add project screenshots here.
+### Home Page
 
-Example:
-
-- Home Page
-- Login Page
-- Dashboard
-- Analytics Dashboard
-- AI Insights
-- prediction
-- register
+![Home](screenshots/home.png)
 
 ---
+
+### Login Page
+
+![Login](screenshots/login.png)
+
+---
+
+### Register Page
+
+![Register](screenshots/register.png)
+
+---
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+### Analytics Dashboard
+
+![Analytics](screenshots/analytics.png)
+
+---
+
+### AI Prediction
+
+![Prediction](screenshots/prediction.png)
+
+---
+
+### Power BI Dashboard
+
+![Power BI](screenshots/powerbi.png)
 
 # Installation
 
